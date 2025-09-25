@@ -3,7 +3,7 @@
 ## 项目简介
 
 这是一个基于Spring Boot 3.4.0实现的Model Context Protocol (MCP)示例项目。MCP是一个用于AI模型与外部工具通信的协议，本项目展示了MCP服务器和客户端的基本实现与交互方式。
-
+![mcp整体工作流程.png](mcp%E6%95%B4%E4%BD%93%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png)
 ## 项目结构
 
 本项目采用Maven多模块架构，包含以下两个主要模块：
@@ -28,7 +28,7 @@ mcp-example/
 - **Java**: 17
 - **Spring Boot**: 3.4.0
 - **Spring AI**: 1.0.0-M7
-- **Alibaba Cloud AI**: 基于Spring AI Alibaba集成
+- **Alibaba Cloud AI**: 1.0.0-M6.1
 - **MCP SDK**: 0.10.0
 - **WebFlux**: 响应式Web框架
 - **Maven**: 项目构建工具
@@ -58,7 +58,6 @@ mcp-example/
 ### 1. 克隆项目
 
 ```bash
-git clone <项目仓库地址>
 cd mcp-example
 ```
 
@@ -93,15 +92,14 @@ mvn spring-boot:run
 ## 项目特点
 
 1. **模块化设计**：清晰的服务器-客户端分离架构
-2. **响应式编程**：基于WebFlux实现响应式通信
-3. **AI集成**：集成Spring AI框架，支持AI模型与外部工具的交互
-4. **MCP协议支持**：完整支持Model Context Protocol规范
+2.**AI集成**：集成Spring AI框架，支持AI模型与外部工具的交互
+3.**MCP协议支持**：完整支持Model Context Protocol规范
 
 ## 配置说明
 
 ### 服务器配置
 
-MCP服务器默认端口为8080，可通过修改`application.yml`文件调整配置。
+MCP服务器默认端口为9999，可通过修改`application.yml`文件调整配置。
 
 ### 客户端配置
 
@@ -113,6 +111,7 @@ MCP服务器默认端口为8080，可通过修改`application.yml`文件调整�
 
 - Spring Boot 3.4.0
 - Spring AI 1.0.0-M7
+- Alibaba Cloud AI 1.0.0-M6.1
 - MCP SDK 0.10.0
 
 ## 扩展与开发
@@ -131,4 +130,4 @@ MCP服务器默认端口为8080，可通过修改`application.yml`文件调整�
 
 ## License
 
-[在此添加许可证信息]
+[Apache License 2.0]
