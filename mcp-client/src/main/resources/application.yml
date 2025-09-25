@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  ai:
+    dashscope:
+      api-key: sk-xxxxxxxx # 获取 API Key 的方式请参考 https://www.dashscope.com/docs/api-reference/api-key
+    mcp:
+      client:
+        toolcallback:
+          enabled: true
+        enabled: true
+        type: ASYNC
+        sse:
+          connections:
+            mcp-server:
+              url: http://localhost:9999
